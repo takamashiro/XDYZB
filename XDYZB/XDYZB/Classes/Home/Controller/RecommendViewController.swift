@@ -49,6 +49,10 @@ class RecommendViewController: UIViewController {
         
         //设置UI界面
         setupUI()
+        
+        NetworkTools.requestData(type: .GET, URLString: "http://httpbin.org/get") { (response) in
+            print(response)
+        }
        
       
     }

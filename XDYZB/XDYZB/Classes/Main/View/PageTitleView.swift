@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PageTitleViewDelegate : class {
-    func pageTitleView(titleView : PageTitleView,selectedIndex index: Int)
+    func pageTitleView(_ titleView : PageTitleView,selectedIndex index: Int)
 }
 
 // MARK:- 定义常量
@@ -73,7 +73,7 @@ extension PageTitleView {
         setupBottomMenuAndScrollLine()
     }
     
-    private func setupTitleLabels() {
+    fileprivate func setupTitleLabels() {
         
         //确定label的一些frame值，不必要放到遍历里面
         let labelW: CGFloat = frame.width / CGFloat(titles.count)
@@ -99,12 +99,12 @@ extension PageTitleView {
             
             //5.给Label添加手势
             label.isUserInteractionEnabled = true
-            let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.titleClick(tapGes:)))
+            let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.titleClick(_:)))
             label.addGestureRecognizer(tapGes)
         }
     }
     
-    private func setupBottomMenuAndScrollLine() {
+    fileprivate func setupBottomMenuAndScrollLine() {
         //1.添加底线
         let bottomLine = UIView()
         bottomLine.backgroundColor = UIColor.lightGray
@@ -127,7 +127,7 @@ extension PageTitleView {
 
 //MARK:- 监听Label的点击
 extension PageTitleView {
-    @objc func titleClick(tapGes : UITapGestureRecognizer) {
+    @objc func titleClick(_ tapGes : UITapGestureRecognizer) {
         //1.获取当前label
         guard let currentLabel = tapGes.view as? UILabel else {return}
         //2.获取之前的Label
@@ -143,14 +143,14 @@ extension PageTitleView {
             self.scrollLine.frame.origin.x = scrollLineX
         }
         //6.通知代理
-        delegate?.pageTitleView(titleView: self, selectedIndex: currentIndex)
+        delegate?.pageTitleView(self, selectedIndex: currentIndex)
         
     }
 }
 
 //MARK:- 对外暴露的方法
 extension PageTitleView {
-    func setTitleWithProgress(progress : CGFloat,sourceIndex : Int,targetIndex : Int) {
+    func setTitleWithProgress(_ progress : CGFloat,sourceIndex : Int,targetIndex : Int) {
         // 1.取出sourceLabel/targetLabel
         let sourceLabel = titleLabels[sourceIndex]
         let targetLabel = titleLabels[targetIndex]

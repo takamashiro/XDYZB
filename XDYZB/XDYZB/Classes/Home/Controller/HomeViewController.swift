@@ -67,7 +67,7 @@ extension HomeViewController {
         pageContentView.backgroundColor = UIColor.purple
     }
     
-    private func setupNavigationBar() {
+    fileprivate func setupNavigationBar() {
         
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo");
@@ -87,14 +87,14 @@ extension HomeViewController {
 
 //MARK: - PageTitleViewDelegate
 extension HomeViewController : PageTitleViewDelegate {
-    func pageTitleView(titleView: PageTitleView, selectedIndex index: Int) {
-        pageContentView.setCurrentIndex(currentIndex: index)
+    func pageTitleView(_ titleView: PageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(index)
     }
 }
 
 //MARK:- PageContentViewDelegate
 extension HomeViewController : PageContentViewDelegate {
-    func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
-       pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    func pageContentView(_ contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+       pageTitleView.setTitleWithProgress(progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }

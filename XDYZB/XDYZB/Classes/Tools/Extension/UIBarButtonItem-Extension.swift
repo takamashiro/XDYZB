@@ -11,7 +11,7 @@ import UIKit
 extension UIBarButtonItem {
 
     //苹果不推荐使用类方法，推荐使用构造函数
-    class func createItem(imageName: String, highImageName: String,size:CGSize) -> UIBarButtonItem {
+    class func createItem(_ imageName: String, highImageName: String,size:CGSize) -> UIBarButtonItem {
     
         let btn = UIButton()
         
