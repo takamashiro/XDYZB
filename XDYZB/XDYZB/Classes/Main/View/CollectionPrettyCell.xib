@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,22 +39,23 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXo-1O-9Az">
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlC-NJ-xp4">
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="G3T-Pd-HRx"/>
-                            <constraint firstAttribute="height" constant="20" id="MnU-Xc-pUX"/>
+                            <constraint firstAttribute="height" constant="20" id="JE8-gm-KVf"/>
+                            <constraint firstAttribute="width" constant="60" id="by1-Ly-dqX"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
+                        <state key="normal" title="9999在线">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                    </label>
+                    </button>
                 </subviews>
             </view>
             <constraints>
@@ -63,16 +63,22 @@
                 <constraint firstAttribute="trailing" secondItem="tuF-RC-Jl5" secondAttribute="trailing" constant="5" id="Cwe-iU-3Nr"/>
                 <constraint firstAttribute="bottom" secondItem="sFi-GT-fu6" secondAttribute="bottom" constant="10" id="HTO-1W-Eqg"/>
                 <constraint firstItem="tuF-RC-Jl5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Xvo-p6-AfJ"/>
-                <constraint firstItem="ZXo-1O-9Az" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Ysp-S8-mqE"/>
                 <constraint firstItem="UYY-xG-LjT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZQ6-yc-lJo"/>
                 <constraint firstItem="tuF-RC-Jl5" firstAttribute="top" secondItem="UYY-xG-LjT" secondAttribute="bottom" constant="5" id="ZQ7-pG-zeV"/>
                 <constraint firstItem="sFi-GT-fu6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iLo-5k-GUW"/>
+                <constraint firstAttribute="trailing" secondItem="NlC-NJ-xp4" secondAttribute="trailing" constant="8" id="kZh-a5-2uu"/>
                 <constraint firstItem="sFi-GT-fu6" firstAttribute="top" secondItem="tuF-RC-Jl5" secondAttribute="bottom" constant="5" id="kz0-6V-tim"/>
+                <constraint firstItem="NlC-NJ-xp4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="rXk-EV-3QX"/>
                 <constraint firstAttribute="trailing" secondItem="UYY-xG-LjT" secondAttribute="trailing" id="sI9-jl-sRB"/>
-                <constraint firstAttribute="trailing" secondItem="ZXo-1O-9Az" secondAttribute="trailing" constant="5" id="vpb-Ax-pRP"/>
             </constraints>
             <size key="customSize" width="176" height="223"/>
-            <point key="canvasLocation" x="-22" y="71.5"/>
+            <connections>
+                <outlet property="cityBtn" destination="sFi-GT-fu6" id="1yN-A9-eKU"/>
+                <outlet property="iconImageView" destination="UYY-xG-LjT" id="lER-Sq-VIg"/>
+                <outlet property="nickNameLabel" destination="tuF-RC-Jl5" id="2Oc-Ry-dK1"/>
+                <outlet property="onlineBtn" destination="NlC-NJ-xp4" id="0zm-cS-E3p"/>
+            </connections>
+            <point key="canvasLocation" x="-87" y="66"/>
         </collectionViewCell>
     </objects>
     <resources>

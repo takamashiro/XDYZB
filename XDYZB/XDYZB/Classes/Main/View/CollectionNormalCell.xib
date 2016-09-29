@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,7 +60,13 @@
                 <constraint firstAttribute="trailing" secondItem="6az-x1-C5a" secondAttribute="trailing" id="y5G-Gb-DDz"/>
             </constraints>
             <size key="customSize" width="218" height="150"/>
-            <point key="canvasLocation" x="46" y="-46"/>
+            <connections>
+                <outlet property="iconImageView" destination="6az-x1-C5a" id="okb-iv-E3m"/>
+                <outlet property="nickNameLabel" destination="9ll-Cv-t2t" id="b3K-XC-OaX"/>
+                <outlet property="onlineBtn" destination="nSZ-he-jWJ" id="eCg-og-JEx"/>
+                <outlet property="roomNameLabel" destination="YQl-Ly-Otx" id="uaU-ka-WI2"/>
+            </connections>
+            <point key="canvasLocation" x="-59" y="-40"/>
         </collectionViewCell>
     </objects>
     <resources>
