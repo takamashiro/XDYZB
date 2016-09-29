@@ -14,13 +14,12 @@ enum MethodType {
 }
 
 class NetworkTools {
-    class func requestData(type : MethodType, URLString : String, parameters : [String : NSString]? = nil, finishedCallback : @escaping (_ result : AnyObject) -> ()) {
-        
+    class func requestData(_ type : MethodType, URLString : String, parameters : [String : NSString]? = nil, finishedCallback : @escaping (_ result : AnyObject) -> ()) {
         // 1.获取类型
-        let method = type == .GET ? HTTPMethod.get : HTTPMethod.post
-        
+        //let method = type == .get ? HTTPMethod.get : HTTPMethod.post
+        //Alamofire方法已经默认了
         // 2.发送网络请求
-        Alamofire.request(URLString,method:method,parameters:parameters,encoding: JSONEncoding.default).responseJSON { (response) in
+        Alamofire.request(URLString, parameters: parameters).responseJSON { (response) in
             // 3.获取结果
             guard let result = response.result.value else {
                 print(response.result.error)
@@ -30,5 +29,7 @@ class NetworkTools {
             // 4.将结果回调出去
             finishedCallback(result as AnyObject)
         }
+        
+        
     }
 }

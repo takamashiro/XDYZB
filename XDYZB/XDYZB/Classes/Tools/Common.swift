@@ -16,3 +16,7 @@ let kScreenW = UIScreen.main.bounds.width
 let kScreenH = UIScreen.main.bounds.height
 
 
+//请求API
+let kGetbigDataRoom = "http://capi.douyucdn.cn/api/v1/getbigDataRoom"
+let kGetVerticalRoom = "http://capi.douyucdn.cn/api/v1/getVerticalRoom"
+let kgetHotCate = "http://capi.douyucdn.cn/api/v1/getHotCate"
