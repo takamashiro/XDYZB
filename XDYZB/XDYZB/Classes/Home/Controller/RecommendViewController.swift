@@ -16,6 +16,10 @@ private let kItemW = (kScreenW - 3 * kItemMargin) / 2
 private let kNormalItemH = kItemW * 3 / 4
 private let kPrettyItemH = kItemW * 4 / 3
 private let kHeaderViewH :CGFloat = 50
+
+private let kCycleViewH : CGFloat = kScreenW * 3 / 8
+private let kGameViewH : CGFloat = 90
+
 class RecommendViewController: UIViewController {
 
     
@@ -42,7 +46,11 @@ class RecommendViewController: UIViewController {
         
         return collectionView
     }()
-    
+    lazy var cycleView : RecommendCycleView = {
+        let cycleView = RecommendCycleView.recommendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        return cycleView
+    }()
     //MARK: -系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +70,11 @@ extension RecommendViewController {
     
     public func setupUI() {
         view.addSubview(collectionView)
+        
+        //将cycleView添加到CollectionView中
+        collectionView.addSubview(cycleView)
+        
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
      }
 }
 
@@ -76,8 +89,11 @@ extension RecommendViewController {
             // 2.将数据传递给GameView
             //self.gameView.groups = self.recommandViewModel.anchorGroups
         }
-
+        // 2.请求轮播数据
+        recommandViewModel.requestCycleData {
+            self.cycleView.cycleModels = self.recommandViewModel.cycleModels
         }
+    }
 }
 
 //MARK:- UICollectionViewDataSource

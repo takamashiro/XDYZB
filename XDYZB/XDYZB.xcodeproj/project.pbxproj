@@ -31,10 +31,15 @@
 		559500C51D9CCE4400CE67DB /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559500C41D9CCE4400CE67DB /* AnchorGroup.swift */; };
 		559500C71D9CCEE700CE67DB /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559500C61D9CCEE700CE67DB /* AnchorModel.swift */; };
 		559500C91D9D001F00CE67DB /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559500C81D9D001F00CE67DB /* CollectionBaseCell.swift */; };
+		559500CC1D9E112C00CE67DB /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559500CA1D9E112C00CE67DB /* CollectionCycleCell.swift */; };
+		559500CD1D9E112C00CE67DB /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 559500CB1D9E112C00CE67DB /* CollectionCycleCell.xib */; };
 		55AB55281D98473800CE2002 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AB55261D98473800CE2002 /* Profile.storyboard */; };
 		55AB552F1D9847B400CE2002 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AB552D1D9847B400CE2002 /* Follow.storyboard */; };
 		55AB55331D9848D500CE2002 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AB55321D9848D500CE2002 /* Home.storyboard */; };
 		55AB55351D9848DD00CE2002 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AB55341D9848DD00CE2002 /* Live.storyboard */; };
+		55B13B361D9D6D8600ED6300 /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B13B351D9D6D8600ED6300 /* RecommendCycleView.swift */; };
+		55B13B381D9D6DB600ED6300 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B13B371D9D6DB600ED6300 /* RecommendCycleView.xib */; };
+		55B13B3A1D9D7CAF00ED6300 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B13B391D9D7CAF00ED6300 /* CycleModel.swift */; };
 		CDA70C2D0DEA66630D16E1A6 /* Pods_XDYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726561C1126ECD15B84D2564 /* Pods_XDYZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,10 +70,15 @@
 		559500C41D9CCE4400CE67DB /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		559500C61D9CCEE700CE67DB /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		559500C81D9D001F00CE67DB /* CollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
+		559500CA1D9E112C00CE67DB /* CollectionCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
+		559500CB1D9E112C00CE67DB /* CollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
 		55AB55271D98473800CE2002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XDYZB/Base.lproj/Profile.storyboard; sourceTree = SOURCE_ROOT; };
 		55AB552E1D9847B400CE2002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = XDYZB/Base.lproj/Follow.storyboard; sourceTree = SOURCE_ROOT; };
 		55AB55321D9848D500CE2002 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = ../../Main/Home.storyboard; sourceTree = "<group>"; };
 		55AB55341D9848DD00CE2002 /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Live.storyboard; path = ../Main/Live.storyboard; sourceTree = "<group>"; };
+		55B13B351D9D6D8600ED6300 /* RecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
+		55B13B371D9D6DB600ED6300 /* RecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
+		55B13B391D9D7CAF00ED6300 /* CycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		6BA0C0FAE5CBE4F6F0613F2A /* Pods-XDYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-XDYZB/Pods-XDYZB.release.xcconfig"; sourceTree = "<group>"; };
 		726561C1126ECD15B84D2564 /* Pods_XDYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73768FFD463D1EFD638A952B /* Pods-XDYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XDYZB/Pods-XDYZB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +109,7 @@
 		552316681D98BCA400BCCAA9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55B13B391D9D7CAF00ED6300 /* CycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -108,6 +119,10 @@
 			children = (
 				5588F2CA1D9A4E4B00016792 /* CollectionHeaderView.swift */,
 				5588F2CB1D9A4E4B00016792 /* CollectionHeaderView.xib */,
+				55B13B351D9D6D8600ED6300 /* RecommendCycleView.swift */,
+				55B13B371D9D6DB600ED6300 /* RecommendCycleView.xib */,
+				559500CA1D9E112C00CE67DB /* CollectionCycleCell.swift */,
+				559500CB1D9E112C00CE67DB /* CollectionCycleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,7 +327,7 @@
 				TargetAttributes = {
 					554D46FA1D989711006FB076 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 2NKZFSKJ2W;
+						DevelopmentTeam = LCAXQ4CFMG;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -347,7 +362,9 @@
 				554D47091D989711006FB076 /* LaunchScreen.storyboard in Resources */,
 				55AB552F1D9847B400CE2002 /* Follow.storyboard in Resources */,
 				55AB55331D9848D500CE2002 /* Home.storyboard in Resources */,
+				55B13B381D9D6DB600ED6300 /* RecommendCycleView.xib in Resources */,
 				554D47061D989711006FB076 /* Assets.xcassets in Resources */,
+				559500CD1D9E112C00CE67DB /* CollectionCycleCell.xib in Resources */,
 				5588F2D51D9A744300016792 /* CollectionPrettyCell.xib in Resources */,
 				554D47041D989711006FB076 /* Main.storyboard in Resources */,
 				55AB55351D9848DD00CE2002 /* Live.storyboard in Resources */,
@@ -411,11 +428,14 @@
 			files = (
 				5523166F1D98BCB000BCCAA9 /* MainViewController.swift in Sources */,
 				5588F2CC1D9A4E4B00016792 /* CollectionHeaderView.swift in Sources */,
+				55B13B361D9D6D8600ED6300 /* RecommendCycleView.swift in Sources */,
 				5588F2C71D99338D00016792 /* UIColor-Extension.swift in Sources */,
 				5588F2C91D9A1DDA00016792 /* RecommendViewController.swift in Sources */,
 				559500C51D9CCE4400CE67DB /* AnchorGroup.swift in Sources */,
 				554D46FF1D989711006FB076 /* AppDelegate.swift in Sources */,
 				5588F2C11D990B0900016792 /* PageTitleView.swift in Sources */,
+				559500CC1D9E112C00CE67DB /* CollectionCycleCell.swift in Sources */,
+				55B13B3A1D9D7CAF00ED6300 /* CycleModel.swift in Sources */,
 				5588F2C51D9930E400016792 /* PageContentView.swift in Sources */,
 				5588F2BF1D98EB8000016792 /* UIBarButtonItem-Extension.swift in Sources */,
 				5588F2C31D990D5C00016792 /* Common.swift in Sources */,
@@ -571,11 +591,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				DEVELOPMENT_TEAM = 2NKZFSKJ2W;
+				DEVELOPMENT_TEAM = LCAXQ4CFMG;
 				INFOPLIST_FILE = XDYZB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = takamashiro.XDYZB2;
+				PRODUCT_BUNDLE_IDENTIFIER = takamashiro.XDYZB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -588,11 +608,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				DEVELOPMENT_TEAM = 2NKZFSKJ2W;
+				DEVELOPMENT_TEAM = LCAXQ4CFMG;
 				INFOPLIST_FILE = XDYZB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = takamashiro.XDYZB2;
+				PRODUCT_BUNDLE_IDENTIFIER = takamashiro.XDYZB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
