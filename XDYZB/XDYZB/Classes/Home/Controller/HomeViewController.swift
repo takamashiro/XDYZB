@@ -70,14 +70,14 @@ extension HomeViewController {
     fileprivate func setupNavigationBar() {
         
 
-        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo");
+        navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo", target: self, action: #selector(self.leftItemClick))
         
         
         let size = CGSize(width: 40, height: 40)
     
-        let historyItem = UIBarButtonItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size)
-        let searchItem = UIBarButtonItem(imageName: "btn_search", highImageName: "btn_search_clicked", size: size)
-        let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click", size:size)
+        let historyItem = UIBarButtonItem(imageName: "image_my_history", highImageName: "Image_my_history_click", size: size,target:self,action:#selector(self.historyItemClick))
+        let searchItem = UIBarButtonItem(imageName: "btn_search", highImageName: "btn_search_clicked",size: size,target:self,action:#selector(self.searchItemClick))
+        let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click",size: size,target:self,action:#selector(self.qrCodeItemClick))
        
         
         navigationItem.rightBarButtonItems = [historyItem,searchItem,qrcodeItem];
@@ -96,5 +96,24 @@ extension HomeViewController : PageTitleViewDelegate {
 extension HomeViewController : PageContentViewDelegate {
     func pageContentView(_ contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
        pageTitleView.setTitleWithProgress(progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+}
+
+//MARK:- selector
+extension HomeViewController {
+    func leftItemClick() {
+        print("leftItemClick")
+    }
+    
+    func historyItemClick() {
+        print("historyItemClick")
+    }
+    
+    func searchItemClick() {
+        print("searchItemClick")
+    }
+    
+    func qrCodeItemClick() {
+        print("qrCodeItemClick")
     }
 }

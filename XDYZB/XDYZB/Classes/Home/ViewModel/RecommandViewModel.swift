@@ -35,7 +35,7 @@ extension RecommandViewModel {
         
         // 3.请求第一部分推荐数据
         dGroup.enter()
-        NetworkTools.requestData(.GET, URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters: ["time" : Date.getCurrentTime() as NSString]) { (result) in
+        NetworkTools.requestData(.GET, URLString: kGetbigDataRoom, parameters: ["time" : Date.getCurrentTime() as NSString]) { (result) in
             
             // 1.将result转成字典类型
             guard let resultDict = result as? [String : NSObject] else { return }
@@ -60,7 +60,7 @@ extension RecommandViewModel {
         
         // 4.请求第二部分颜值数据
         dGroup.enter()
-        NetworkTools.requestData(.GET, URLString: "http://capi.douyucdn.cn/api/v1/getVerticalRoom", parameters: parameters as [String : NSString]?) { (result) in
+        NetworkTools.requestData(.GET, URLString: kGetVerticalRoom, parameters: parameters as [String : NSString]?) { (result) in
             // 1.将result转成字典类型
             guard let resultDict = result as? [String : NSObject] else { return }
             
@@ -85,7 +85,7 @@ extension RecommandViewModel {
         // 5.请求2-12部分游戏数据
         dGroup.enter()
         // http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1474252024
-        NetworkTools.requestData(.GET, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters as [String : NSString]?) { (result) in
+        NetworkTools.requestData(.GET, URLString: kgetHotCate, parameters: parameters as [String : NSString]?) { (result) in
             // 1.将result转成字典类型
             guard let resultDict = result as? [String : NSObject] else { return }
             
@@ -114,7 +114,7 @@ extension RecommandViewModel {
     
     // 请求无线轮播的数据
     func requestCycleData(finishCallback : @escaping () -> ()) {
-        NetworkTools.requestData(.GET, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
+        NetworkTools.requestData(.GET, URLString: kGetCycleData, parameters: ["version" : "2.300"]) { (result) in
             // 1.获取整体字典数据
             guard let resultDict = result as? [String : NSObject] else { return }
             
