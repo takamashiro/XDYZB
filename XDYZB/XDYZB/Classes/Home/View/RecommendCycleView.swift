@@ -68,7 +68,6 @@ extension RecommendCycleView {
 //MARK: -提供UICollectionView DataSource
 extension RecommendCycleView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("count:\(cycleModels?.count)")
         return (cycleModels?.count ?? 0) * 10000
     }
     

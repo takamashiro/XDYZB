@@ -48,8 +48,14 @@ class RecommendViewController: UIViewController {
     }()
     lazy var cycleView : RecommendCycleView = {
         let cycleView = RecommendCycleView.recommendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: kScreenW, height: kCycleViewH)
         return cycleView
+    }()
+    
+    lazy var gameView : RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
     }()
     //MARK: -系统回调函数
     override func viewDidLoad() {
@@ -71,10 +77,12 @@ extension RecommendViewController {
     public func setupUI() {
         view.addSubview(collectionView)
         
-        //将cycleView添加到CollectionView中
+        //2.将cycleView添加到CollectionView中
         collectionView.addSubview(cycleView)
-        
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        // 3.将gameView添加collectionView中
+        collectionView.addSubview(gameView)
+
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
      }
 }
 
@@ -87,7 +95,7 @@ extension RecommendViewController {
             self.collectionView.reloadData()
             
             // 2.将数据传递给GameView
-            //self.gameView.groups = self.recommandViewModel.anchorGroups
+            self.gameView.groups = self.recommandViewModel.anchorGroups
         }
         // 2.请求轮播数据
         recommandViewModel.requestCycleData {
