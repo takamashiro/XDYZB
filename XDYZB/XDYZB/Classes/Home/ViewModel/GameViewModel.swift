@@ -14,7 +14,7 @@ class GameViewModel {
 
 extension GameViewModel {
     func loadGameData(finishedCallback : @escaping () -> ()) {
-        NetworkTools.requestData(.GET, URLString: "http://capi.douyucdn.cn/api/v1/getColumnDetail", parameters: ["shortName" : "game"]) { (result) in
+        NetworkTools.requestData(.GET, URLString: kGetGameData, parameters: ["shortName" : "game"]) { (result) in
             // 1.获取数据
             guard let resultDict = result as? [String : Any] else { return }
             guard let dataArray = resultDict["data"] as? [[String : Any]] else { return }

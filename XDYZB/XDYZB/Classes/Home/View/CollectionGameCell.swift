@@ -16,18 +16,14 @@ class CollectionGameCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     // MARK: 定义模型属性
-    var group : AnchorGroup? {
+    var gameModel : GameBaseModel? {
         didSet {
-            
-            titleLabel.text = group?.tag_name
-            //更多group的group?.icon_url为""
-            if group?.icon_url == "" {
+            titleLabel.text = gameModel?.tag_name
+            if let iconURL = URL(string: gameModel?.icon_url ?? "") {
+                iconImageView.kf.setImage(with: iconURL, placeholder:  UIImage(named: "home_more_btn"))
+            } else {
                 iconImageView.image = UIImage(named: "home_more_btn")
-                return
             }
-            let iconURL = URL(string: group?.icon_url ?? "")!
-            iconImageView.kf.setImage(with: iconURL, placeholder: UIImage(named: "home_more_btn"), options: [.transition(.fade(1))], progressBlock: nil, completionHandler: nil)
         }
     }
-
 }

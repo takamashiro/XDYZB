@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,16 +15,14 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIn-lk-gnS">
-                        <constraints>
-                            <constraint firstAttribute="height" constant="15" id="vCV-C0-GKv"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="px4-Oo-b2o">
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="px4-Oo-b2o" secondAttribute="height" multiplier="1:1" id="cH6-zY-QBs"/>
+                            <constraint firstAttribute="height" constant="45" id="3Sn-11-bVc"/>
+                            <constraint firstAttribute="width" constant="45" id="pg7-04-NIz"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -34,14 +31,22 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igp-ZY-SAa" userLabel="分割线">
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="4F4-hp-CKz"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="hIn-lk-gnS" firstAttribute="top" secondItem="px4-Oo-b2o" secondAttribute="bottom" constant="5" id="0Vd-FF-OwT"/>
+                <constraint firstItem="igp-ZY-SAa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0zc-l4-L0w"/>
+                <constraint firstItem="px4-Oo-b2o" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="5WO-rk-wC2"/>
+                <constraint firstItem="hIn-lk-gnS" firstAttribute="centerX" secondItem="px4-Oo-b2o" secondAttribute="centerX" id="7kg-OM-o6Z"/>
+                <constraint firstAttribute="trailing" secondItem="igp-ZY-SAa" secondAttribute="trailing" id="LXT-Kx-OIP"/>
                 <constraint firstItem="px4-Oo-b2o" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="NPh-6E-Fi1"/>
-                <constraint firstItem="hIn-lk-gnS" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="QLT-W9-BoP"/>
-                <constraint firstItem="px4-Oo-b2o" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="S1U-IZ-vfI"/>
-                <constraint firstAttribute="bottom" secondItem="hIn-lk-gnS" secondAttribute="bottom" constant="10" id="ViO-8c-Fhp"/>
+                <constraint firstAttribute="bottom" secondItem="igp-ZY-SAa" secondAttribute="bottom" constant="-1" id="ji0-Cg-kHh"/>
+                <constraint firstItem="hIn-lk-gnS" firstAttribute="top" secondItem="px4-Oo-b2o" secondAttribute="bottom" constant="5" id="w4q-h7-v2y"/>
             </constraints>
             <size key="customSize" width="103" height="98"/>
             <connections>
