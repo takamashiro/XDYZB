@@ -39,6 +39,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSZ-he-jWJ">
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.68597495719178081" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="6666在线" image="Image_online"/>
                     </button>
@@ -50,13 +51,13 @@
                 <constraint firstItem="rYr-yu-UIB" firstAttribute="top" secondItem="6az-x1-C5a" secondAttribute="bottom" constant="5" id="CBl-lV-Tmy"/>
                 <constraint firstItem="9ll-Cv-t2t" firstAttribute="bottom" secondItem="6az-x1-C5a" secondAttribute="bottom" constant="-5" id="Jv4-qR-8gz"/>
                 <constraint firstItem="9ll-Cv-t2t" firstAttribute="leading" secondItem="6az-x1-C5a" secondAttribute="leading" constant="5" id="KFI-06-FJz"/>
+                <constraint firstItem="nSZ-he-jWJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Man-ow-JLW"/>
                 <constraint firstAttribute="bottom" secondItem="rYr-yu-UIB" secondAttribute="bottom" constant="10" id="VLr-sd-yV3"/>
-                <constraint firstItem="nSZ-he-jWJ" firstAttribute="trailing" secondItem="6az-x1-C5a" secondAttribute="trailing" constant="-5" id="ozE-kQ-TKD"/>
+                <constraint firstAttribute="trailing" secondItem="nSZ-he-jWJ" secondAttribute="trailing" id="kcY-rZ-2hX"/>
                 <constraint firstItem="YQl-Ly-Otx" firstAttribute="leading" secondItem="rYr-yu-UIB" secondAttribute="trailing" constant="5" id="rrs-G0-zco"/>
                 <constraint firstItem="6az-x1-C5a" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tuT-KQ-KTO"/>
                 <constraint firstAttribute="trailing" secondItem="YQl-Ly-Otx" secondAttribute="trailing" constant="5" id="uxZ-0z-388"/>
                 <constraint firstItem="6az-x1-C5a" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vRk-nB-nKu"/>
-                <constraint firstItem="nSZ-he-jWJ" firstAttribute="bottom" secondItem="6az-x1-C5a" secondAttribute="bottom" constant="-5" id="vkp-Mv-r6y"/>
                 <constraint firstAttribute="trailing" secondItem="6az-x1-C5a" secondAttribute="trailing" id="y5G-Gb-DDz"/>
             </constraints>
             <size key="customSize" width="218" height="150"/>
