@@ -30,11 +30,8 @@ class HomeViewController: UIViewController {
         childVCs.append(RecommendViewController())
         childVCs.append(GameViewController())
         childVCs.append(EntertainmentViewController())
-        for _ in 0..<1 {
-            let vc = UIViewController()
-            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
-            childVCs.append(vc)
-        }
+        childVCs.append(FunToPlayViewController())
+//后期要对四个控制器做到懒加载
         let contentView = PageContentView(frame: contentFrame, childVCs: childVCs, parentViewController: self)
         contentView.delegate = self
         return contentView

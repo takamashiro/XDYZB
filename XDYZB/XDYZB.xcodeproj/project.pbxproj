@@ -17,6 +17,7 @@
 		554D47041D989711006FB076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554D47021D989711006FB076 /* Main.storyboard */; };
 		554D47061D989711006FB076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554D47051D989711006FB076 /* Assets.xcassets */; };
 		554D47091D989711006FB076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554D47071D989711006FB076 /* LaunchScreen.storyboard */; };
+		55559B6D1DAD064B006C2E4B /* FunToPlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55559B6C1DAD064B006C2E4B /* FunToPlayViewModel.swift */; };
 		5564F10D1DABE8DA00D36A00 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564F10C1DABE8DA00D36A00 /* GameViewModel.swift */; };
 		5564F10F1DABE95700D36A00 /* GameBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564F10E1DABE95700D36A00 /* GameBaseModel.swift */; };
 		5564F1111DABE9AE00D36A00 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564F1101DABE9AE00D36A00 /* GameModel.swift */; };
@@ -50,6 +51,7 @@
 		55B13B361D9D6D8600ED6300 /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B13B351D9D6D8600ED6300 /* RecommendCycleView.swift */; };
 		55B13B381D9D6DB600ED6300 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55B13B371D9D6DB600ED6300 /* RecommendCycleView.xib */; };
 		55B13B3A1D9D7CAF00ED6300 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B13B391D9D7CAF00ED6300 /* CycleModel.swift */; };
+		55FC59511DAD0F7E00A8EAE8 /* FunToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC59501DAD0F7E00A8EAE8 /* FunToPlayViewController.swift */; };
 		CDA70C2D0DEA66630D16E1A6 /* Pods_XDYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726561C1126ECD15B84D2564 /* Pods_XDYZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,7 @@
 		554D47051D989711006FB076 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		554D47081D989711006FB076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		554D470A1D989711006FB076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55559B6C1DAD064B006C2E4B /* FunToPlayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunToPlayViewModel.swift; sourceTree = "<group>"; };
 		5564F10C1DABE8DA00D36A00 /* GameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		5564F10E1DABE95700D36A00 /* GameBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBaseModel.swift; sourceTree = "<group>"; };
 		5564F1101DABE9AE00D36A00 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 		55B13B351D9D6D8600ED6300 /* RecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		55B13B371D9D6DB600ED6300 /* RecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		55B13B391D9D7CAF00ED6300 /* CycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
+		55FC59501DAD0F7E00A8EAE8 /* FunToPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunToPlayViewController.swift; sourceTree = "<group>"; };
 		6BA0C0FAE5CBE4F6F0613F2A /* Pods-XDYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-XDYZB/Pods-XDYZB.release.xcconfig"; sourceTree = "<group>"; };
 		726561C1126ECD15B84D2564 /* Pods_XDYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73768FFD463D1EFD638A952B /* Pods-XDYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XDYZB/Pods-XDYZB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				5588F2C81D9A1DDA00016792 /* RecommendViewController.swift */,
 				5564F1121DABEB2200D36A00 /* GameViewController.swift */,
 				5543135C1DACBD62004E7F94 /* EntertainmentViewController.swift */,
+				55FC59501DAD0F7E00A8EAE8 /* FunToPlayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				5588F2D71D9B831800016792 /* RecommandViewModel.swift */,
 				5564F10C1DABE8DA00D36A00 /* GameViewModel.swift */,
 				5543135A1DACB951004E7F94 /* EntertainmentViewModel.swift */,
+				55559B6C1DAD064B006C2E4B /* FunToPlayViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				5564F10F1DABE95700D36A00 /* GameBaseModel.swift in Sources */,
 				5588F2C31D990D5C00016792 /* Common.swift in Sources */,
 				559500CF1D9E5CDB00CE67DB /* RecommendGameView.swift in Sources */,
+				55FC59511DAD0F7E00A8EAE8 /* FunToPlayViewController.swift in Sources */,
 				5588F2D41D9A744300016792 /* CollectionPrettyCell.swift in Sources */,
 				5588F2DA1D9B873100016792 /* NSDate-Extension.swift in Sources */,
 				559500C91D9D001F00CE67DB /* CollectionBaseCell.swift in Sources */,
@@ -485,6 +492,7 @@
 				553A2D5E1D9F358000AA59BB /* CollectionGameCell.swift in Sources */,
 				557CA4381D9ADA6000851448 /* NetworkTools.swift in Sources */,
 				552316711D98BD4500BCCAA9 /* HomeViewController.swift in Sources */,
+				55559B6D1DAD064B006C2E4B /* FunToPlayViewModel.swift in Sources */,
 				5588F2D81D9B831800016792 /* RecommandViewModel.swift in Sources */,
 				559500C71D9CCEE700CE67DB /* AnchorModel.swift in Sources */,
 			);
