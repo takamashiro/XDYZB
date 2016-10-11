@@ -23,3 +23,6 @@ let kgetHotCate = "http://capi.douyucdn.cn/api/v1/getHotCate"
 let kGetCycleData = "http://www.douyutv.com/api/v1/slide/6"
 
 let kGetGameData = "http://capi.douyucdn.cn/api/v1/getColumnDetail"
+
+//http://capi.douyucdn.cn/api/v1/getHotRoom/2?aid=ios&client_sys=ios&time=1475372700&auth=ba48f90c205ee5825be9cce172fb02e5
+let kGetData = "http://capi.douyucdn.cn/api/v1/getHotRoom/2"

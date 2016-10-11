@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let kEdgeMargin : CGFloat = 10
+private let kEdgeMargin : CGFloat = 15
 private let kItemW : CGFloat = (kScreenW - 2 * kEdgeMargin) / 3
 private let kItemH : CGFloat = kItemW * 6 / 5
 private let kHeaderViewH : CGFloat = 50
@@ -34,11 +34,16 @@ class GameViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
         collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
+        
+        collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight];
+        
         return collectionView
         }()
     fileprivate lazy var gameView : RecommendGameView = {
         let gameView = RecommendGameView.recommendGameView()
         gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        gameView.backgroundColor = UIColor.orange
+        gameView.contentMode = UIViewContentMode.center
         return gameView
     }()
     fileprivate lazy var topHeaderView : CollectionHeaderView = {
