@@ -8,11 +8,21 @@
 
 import UIKit
 
-class GameBaseModel: NSObject {
+class BaseGameModel: NSObject {
     /// 组显示的标题
     var tag_name : String = ""
     /// 游戏对应的图标
     var icon_url : String = ""
+    // MARK:- 自定义构造函数
+    override init() {
+        
+    }
     
+    init(dict : [String : Any]) {
+        super.init()
+        
+        setValuesForKeys(dict)
+    }
+    
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
 }
-

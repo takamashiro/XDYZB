@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AmuseMenuView" customModule="XDYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="HXM-hL-mgg">
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.4431119704" blue="0.21514970999999999" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HRj-vZ-NMc">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="LUa-3F-fiO">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="Yge-hb-cBv"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="okB-rJ-CHE"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HRj-vZ-NMc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="18R-8O-NDG"/>
+                <constraint firstItem="HRj-vZ-NMc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8bd-tX-QGH"/>
+                <constraint firstAttribute="trailing" secondItem="HRj-vZ-NMc" secondAttribute="trailing" id="ewb-yR-eNR"/>
+                <constraint firstItem="HXM-hL-mgg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="huP-5K-h5k"/>
+                <constraint firstAttribute="bottom" secondItem="HXM-hL-mgg" secondAttribute="bottom" constant="-5" id="inE-1c-25A"/>
+                <constraint firstItem="HXM-hL-mgg" firstAttribute="top" secondItem="HRj-vZ-NMc" secondAttribute="bottom" constant="-5" id="pC2-d4-Fj1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="HRj-vZ-NMc" id="tJh-9U-gqk"/>
+                <outlet property="pageControl" destination="HXM-hL-mgg" id="aGp-pR-J0O"/>
+            </connections>
+            <point key="canvasLocation" x="15.5" y="-318"/>
+        </view>
+    </objects>
+</document>

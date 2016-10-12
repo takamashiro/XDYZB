@@ -8,11 +8,6 @@
 
 import UIKit
 
-class GameModel: GameBaseModel {
-    init(dict : [String : Any]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
+class GameModel: BaseGameModel {
+   
 }

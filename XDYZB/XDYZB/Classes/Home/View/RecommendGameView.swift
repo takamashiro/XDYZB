@@ -15,7 +15,7 @@ private let kEdgeInsetMargin : CGFloat = 10
 class RecommendGameView: UIView {
 
     // MARK: 定义数据的属性
-    var groups : [GameBaseModel]? {
+    var groups : [BaseGameModel]? {
         didSet {
            
             // 刷新表格
@@ -59,7 +59,7 @@ extension RecommendGameView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! CollectionGameCell
         
-        cell.gameModel = groups![(indexPath as NSIndexPath).item]
+        cell.baseGame = groups![(indexPath as NSIndexPath).item]
         
         return cell
     }

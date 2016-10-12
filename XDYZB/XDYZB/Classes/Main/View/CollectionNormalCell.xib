@@ -39,24 +39,25 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSZ-he-jWJ">
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.7005297517123289" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="6666在线" image="Image_online"/>
                     </button>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="nSZ-he-jWJ" secondAttribute="trailing" id="2vy-OP-mta"/>
                 <constraint firstItem="rYr-yu-UIB" firstAttribute="centerY" secondItem="YQl-Ly-Otx" secondAttribute="centerY" id="4hg-Kp-9On"/>
                 <constraint firstItem="rYr-yu-UIB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="76d-c3-s4I"/>
                 <constraint firstItem="rYr-yu-UIB" firstAttribute="top" secondItem="6az-x1-C5a" secondAttribute="bottom" constant="5" id="CBl-lV-Tmy"/>
+                <constraint firstItem="nSZ-he-jWJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="F0k-qd-sm3"/>
                 <constraint firstItem="9ll-Cv-t2t" firstAttribute="bottom" secondItem="6az-x1-C5a" secondAttribute="bottom" constant="-5" id="Jv4-qR-8gz"/>
                 <constraint firstItem="9ll-Cv-t2t" firstAttribute="leading" secondItem="6az-x1-C5a" secondAttribute="leading" constant="5" id="KFI-06-FJz"/>
                 <constraint firstAttribute="bottom" secondItem="rYr-yu-UIB" secondAttribute="bottom" constant="10" id="VLr-sd-yV3"/>
-                <constraint firstItem="nSZ-he-jWJ" firstAttribute="trailing" secondItem="6az-x1-C5a" secondAttribute="trailing" constant="-5" id="ozE-kQ-TKD"/>
                 <constraint firstItem="YQl-Ly-Otx" firstAttribute="leading" secondItem="rYr-yu-UIB" secondAttribute="trailing" constant="5" id="rrs-G0-zco"/>
                 <constraint firstItem="6az-x1-C5a" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tuT-KQ-KTO"/>
                 <constraint firstAttribute="trailing" secondItem="YQl-Ly-Otx" secondAttribute="trailing" constant="5" id="uxZ-0z-388"/>
                 <constraint firstItem="6az-x1-C5a" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vRk-nB-nKu"/>
-                <constraint firstItem="nSZ-he-jWJ" firstAttribute="bottom" secondItem="6az-x1-C5a" secondAttribute="bottom" constant="-5" id="vkp-Mv-r6y"/>
                 <constraint firstAttribute="trailing" secondItem="6az-x1-C5a" secondAttribute="trailing" id="y5G-Gb-DDz"/>
             </constraints>
             <size key="customSize" width="218" height="150"/>
