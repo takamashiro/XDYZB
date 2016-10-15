@@ -66,9 +66,9 @@
                 <constraint firstItem="UYY-xG-LjT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZQ6-yc-lJo"/>
                 <constraint firstItem="tuF-RC-Jl5" firstAttribute="top" secondItem="UYY-xG-LjT" secondAttribute="bottom" constant="5" id="ZQ7-pG-zeV"/>
                 <constraint firstItem="sFi-GT-fu6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iLo-5k-GUW"/>
-                <constraint firstAttribute="trailing" secondItem="NlC-NJ-xp4" secondAttribute="trailing" constant="8" id="kZh-a5-2uu"/>
+                <constraint firstAttribute="trailing" secondItem="NlC-NJ-xp4" secondAttribute="trailing" id="kZh-a5-2uu"/>
                 <constraint firstItem="sFi-GT-fu6" firstAttribute="top" secondItem="tuF-RC-Jl5" secondAttribute="bottom" constant="5" id="kz0-6V-tim"/>
-                <constraint firstItem="NlC-NJ-xp4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="rXk-EV-3QX"/>
+                <constraint firstItem="NlC-NJ-xp4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rXk-EV-3QX"/>
                 <constraint firstAttribute="trailing" secondItem="UYY-xG-LjT" secondAttribute="trailing" id="sI9-jl-sRB"/>
             </constraints>
             <size key="customSize" width="176" height="223"/>

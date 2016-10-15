@@ -26,3 +26,9 @@ let kGetGameData = "http://capi.douyucdn.cn/api/v1/getColumnDetail"
 
 //http://capi.douyucdn.cn/api/v1/getHotRoom/2?aid=ios&client_sys=ios&time=1475372700&auth=ba48f90c205ee5825be9cce172fb02e5
 let kGetAmuseData = "http://capi.douyucdn.cn/api/v1/getHotRoom/2"
+//趣玩
+//前20
+//http://capi.douyucdn.cn/api/v1/getColumnRoom/3?offset=0&limit=20
+//再20
+//http://capi.douyucdn.cn/api/v1/getColumnRoom/3?offset=20&client_sys=ios&limit=20
+let kGetFunToPlayData = "http://capi.douyucdn.cn/api/v1/getColumnRoom/3"

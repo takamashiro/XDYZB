@@ -40,6 +40,9 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSZ-he-jWJ">
                         <color key="backgroundColor" white="0.33333333333333331" alpha="0.7005297517123289" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="Nsx-y3-oHC"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="6666在线" image="Image_online"/>
                     </button>
