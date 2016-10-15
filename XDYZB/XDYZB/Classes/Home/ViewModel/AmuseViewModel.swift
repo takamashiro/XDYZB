@@ -13,6 +13,6 @@ class AmuseViewModel: BaseViewModel {
 }
 extension AmuseViewModel {
     func loadAmuseData(finishedCallback : @escaping () -> ()) {
-        loadAnchorData(URLString: kGetAmuseData, finishedCallback: finishedCallback)
+        loadAnchorData(isGroupData: true, URLString: kGetAmuseData, finishedCallback: finishedCallback)
     }
 }

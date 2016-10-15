@@ -15,15 +15,26 @@ class BaseViewModel {
 
 
 extension BaseViewModel {
-    func loadAnchorData(URLString : String, parameters : [String : Any]? = nil, finishedCallback : @escaping () -> ()) {
+    func loadAnchorData(isGroupData : Bool, URLString : String, parameters : [String : Any]? = nil, finishedCallback : @escaping () -> ()) {
         NetworkTools.requestData(.GET, URLString: URLString, parameters: parameters) { (result) in
             // 1.对界面进行处理
             guard let resultDict = result as? [String : Any] else { return }
             guard let dataArray = resultDict["data"] as? [[String : Any]] else { return }
             
             // 2.遍历数组中的字典
-            for dict in dataArray {
-                self.anchorGroups.append(AnchorGroup(dict: dict))
+            if isGroupData {
+                for dict in dataArray {
+                    self.anchorGroups.append(AnchorGroup(dict: dict))
+                }
+            } else {
+                
+                let group = AnchorGroup()
+                
+                for dict in dataArray {
+                    group.anchors.append(AnchorModel(dict:dict))
+                }
+                
+                self.anchorGroups.append(group)
             }
             
             // 3.完成回调

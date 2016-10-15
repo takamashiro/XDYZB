@@ -19,7 +19,7 @@ let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
 let kNormalItemH = kNormalItemW * 3 / 4
 let kPrettyItemH = kNormalItemW * 4 / 3
 
-class BaseAnchorViewController: UIViewController {
+class BaseAnchorViewController: BaseViewController {
     
     // MARK: 定义属性
     var baseVM : BaseViewModel!
@@ -29,7 +29,7 @@ class BaseAnchorViewController: UIViewController {
         layout.itemSize = CGSize(width: kNormalItemW, height: kNormalItemH)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = kItemMargin
-        layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
+        layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH) //header高度
         layout.sectionInset = UIEdgeInsets(top: 0, left: kItemMargin, bottom: 0, right: kItemMargin)
         
         // 2.创建UICollectionView
@@ -58,8 +58,14 @@ class BaseAnchorViewController: UIViewController {
 
 // MARK:- 设置UI界面
 extension BaseAnchorViewController {
-    func setupUI() {
+    override func setupUI() {
+        
+        contentView = collectionView
+        
         view.addSubview(collectionView)
+        
+        super.setupUI()
+
     }
 }
 
@@ -70,8 +76,8 @@ extension BaseAnchorViewController {
 }
 
 
-// MARK:- 遵守UICollectionView的数据源&代理协议
-extension BaseAnchorViewController : UICollectionViewDataSource, UICollectionViewDelegate {
+// MARK:- 遵守UICollectionView的数据源协议
+extension BaseAnchorViewController : UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return baseVM.anchorGroups.count
     }
@@ -103,5 +109,12 @@ extension BaseAnchorViewController : UICollectionViewDataSource, UICollectionVie
             headerView.group = baseVM.anchorGroups[indexPath.section]
         }
         return headerView
+    }
+}
+
+// MARK:- 遵守UICollectionView的代理协议
+extension BaseAnchorViewController :  UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("点击了\(indexPath )")
     }
 }

@@ -1,4 +1,4 @@
-//
+ //
 //  FunToPlayViewModel.swift
 //  XDYZB
 //
@@ -9,7 +9,7 @@
 import UIKit
 
 
-class FunToPlayViewModel {
+ class FunToPlayViewModel : BaseViewModel {
     
     lazy var FunToPlays : [AnchorModel] = [AnchorModel]()
     var parameters :[String : NSString]? {
@@ -21,23 +21,12 @@ class FunToPlayViewModel {
 
 extension FunToPlayViewModel {
     func loadFunToPlayData(finishedCallback : @escaping () -> ()) {
-        
-        let parameters = ["offset" : "0","limit" : "20"]
-        NetworkTools.requestData(.GET, URLString: kGetFunToPlayData, parameters: parameters as [String : NSString]?) { (result) in
-            // 1.将result转成字典类型
-            guard let resultDict = result as? [String : NSObject] else { return }
-            
-            // 2.根据data该key,获取数组
-            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else { return }
-            
-            // 3.遍历数组,获取字典,并且将字典转成模型对象
-            for dict in dataArray {
-                let anchor = AnchorModel(dict: dict)
-                self.FunToPlays.append(anchor)
-            }
-            
+      
+        let parameters = ["limit" : 30,"offset" : 0]
+        loadAnchorData(isGroupData: false, URLString: kGetFunToPlayData, parameters: parameters) {
             finishedCallback()
         }
+      
     }
 }
 //下拉刷新

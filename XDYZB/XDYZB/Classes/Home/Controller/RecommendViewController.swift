@@ -63,11 +63,15 @@ extension RecommendViewController {
             moreGroup.tag_name = "更多"
             tempGroups.append(moreGroup)
             self.gameView.groups = tempGroups
+            
+            //3.数据请求完成
+            self.loadDataFinished()
         }
         // 2.请求轮播数据
         recommandViewModel.requestCycleData {
             self.cycleView.cycleModels = self.recommandViewModel.cycleModels
         }
+        
     }
 }
 
