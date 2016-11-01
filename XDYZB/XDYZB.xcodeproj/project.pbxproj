@@ -62,6 +62,9 @@
 		55D387D11DB2208A007DB488 /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D387D01DB2208A007DB488 /* RoomShowViewController.swift */; };
 		55D387D31DB2210B007DB488 /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D387D21DB2210B007DB488 /* RoomNormalViewController.swift */; };
 		55D387D51DB22480007DB488 /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D387D41DB22480007DB488 /* CustomNavigationViewController.swift */; };
+		55EAD0AE1DC8BA4100C144CD /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EAD0AB1DC8BA4100C144CD /* QRCode.storyboard */; };
+		55EAD0AF1DC8BA4100C144CD /* QRCodeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EAD0AC1DC8BA4100C144CD /* QRCodeCreateViewController.swift */; };
+		55EAD0B01DC8BA4100C144CD /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EAD0AD1DC8BA4100C144CD /* QRCodeViewController.swift */; };
 		CDA70C2D0DEA66630D16E1A6 /* Pods_XDYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726561C1126ECD15B84D2564 /* Pods_XDYZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +126,9 @@
 		55D387D01DB2208A007DB488 /* RoomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
 		55D387D21DB2210B007DB488 /* RoomNormalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
 		55D387D41DB22480007DB488 /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
+		55EAD0AB1DC8BA4100C144CD /* QRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
+		55EAD0AC1DC8BA4100C144CD /* QRCodeCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeCreateViewController.swift; sourceTree = "<group>"; };
+		55EAD0AD1DC8BA4100C144CD /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		6BA0C0FAE5CBE4F6F0613F2A /* Pods-XDYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-XDYZB/Pods-XDYZB.release.xcconfig"; sourceTree = "<group>"; };
 		726561C1126ECD15B84D2564 /* Pods_XDYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73768FFD463D1EFD638A952B /* Pods-XDYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XDYZB/Pods-XDYZB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -303,6 +309,7 @@
 		55AB551D1D983D2600CE2002 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				55EAD0AA1DC8BA4100C144CD /* QRCode */,
 				5588F2D61D9B82F400016792 /* ViewModel */,
 				552316681D98BCA400BCCAA9 /* Model */,
 				552316691D98BCA400BCCAA9 /* View */,
@@ -381,6 +388,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		55EAD0AA1DC8BA4100C144CD /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				55EAD0AB1DC8BA4100C144CD /* QRCode.storyboard */,
+				55EAD0AC1DC8BA4100C144CD /* QRCodeCreateViewController.swift */,
+				55EAD0AD1DC8BA4100C144CD /* QRCodeViewController.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		816BEF0D9F12A45C1556FA35 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,7 +445,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = com.takamashiro;
 				TargetAttributes = {
 					554D46FA1D989711006FB076 = {
@@ -469,6 +486,7 @@
 				554D47091D989711006FB076 /* LaunchScreen.storyboard in Resources */,
 				55AB552F1D9847B400CE2002 /* Follow.storyboard in Resources */,
 				55AB55331D9848D500CE2002 /* Home.storyboard in Resources */,
+				55EAD0AE1DC8BA4100C144CD /* QRCode.storyboard in Resources */,
 				552514221DAD45F40063886B /* Live.storyboard in Resources */,
 				55B13B381D9D6DB600ED6300 /* RecommendCycleView.xib in Resources */,
 				554313611DADFC4B004E7F94 /* AmuseMenuView.xib in Resources */,
@@ -560,6 +578,7 @@
 				5564F1131DABEB2200D36A00 /* GameViewController.swift in Sources */,
 				55D387D51DB22480007DB488 /* CustomNavigationViewController.swift in Sources */,
 				5525141D1DAD3F940063886B /* AmuseViewController.swift in Sources */,
+				55EAD0AF1DC8BA4100C144CD /* QRCodeCreateViewController.swift in Sources */,
 				5564F10D1DABE8DA00D36A00 /* GameViewModel.swift in Sources */,
 				5564F10F1DABE95700D36A00 /* BaseGameModel.swift in Sources */,
 				5588F2C31D990D5C00016792 /* Common.swift in Sources */,
@@ -567,6 +586,7 @@
 				5588F2D41D9A744300016792 /* CollectionPrettyCell.swift in Sources */,
 				5588F2DA1D9B873100016792 /* NSDate-Extension.swift in Sources */,
 				559500C91D9D001F00CE67DB /* CollectionBaseCell.swift in Sources */,
+				55EAD0B01DC8BA4100C144CD /* QRCodeViewController.swift in Sources */,
 				5543135F1DADFC2B004E7F94 /* AmuseMenuView.swift in Sources */,
 				5588F2D01D9A6AD700016792 /* CollectionNormalCell.swift in Sources */,
 				553A2D5E1D9F358000AA59BB /* CollectionGameCell.swift in Sources */,

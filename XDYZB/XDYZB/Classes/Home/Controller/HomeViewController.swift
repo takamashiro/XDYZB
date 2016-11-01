@@ -113,6 +113,10 @@ extension HomeViewController {
     }
     
     func qrCodeItemClick() {
-        print("qrCodeItemClick")
+        //1.创建二维码控制器
+        let sb = UIStoryboard(name: "QRCode", bundle: nil)
+        let vc = sb.instantiateInitialViewController()!
+        //2.弹出二维码控制器
+        present(vc, animated: true, completion: nil)
     }
 }
