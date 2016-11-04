@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 private let kItemMargin : CGFloat = 10
 private let kHeaderViewH : CGFloat = 50
@@ -20,6 +21,7 @@ let kNormalItemH = kNormalItemW * 3 / 4
 let kPrettyItemH = kNormalItemW * 4 / 3
 
 class BaseAnchorViewController: BaseViewController {
+    
     
     // MARK: 定义属性
     var baseVM : BaseViewModel!
@@ -46,15 +48,30 @@ class BaseAnchorViewController: BaseViewController {
         return collectionView
         }()
     
-    // MARK: 系统回调
+    lazy var header : MJRefreshGifHeader = {
+        let header = MJRefreshGifHeader(refreshingTarget: self, refreshingAction: #selector(BaseAnchorViewController.loadData))
+        
+        header?.setImages([UIImage(named:"dyla_img_mj_stateIdle_64x66_")!], for: MJRefreshState.idle)
+        header?.setImages([UIImage(named:"dyla_img_mj_statePulling_64x66_")!], for: MJRefreshState.pulling)
+    header?.setImages([UIImage(named:"dyla_img_mj_stateRefreshing_01_135x66_")!,UIImage(named:"dyla_img_mj_stateRefreshing_02_135x66_")!,UIImage(named:"dyla_img_mj_stateRefreshing_03_135x66_")!,UIImage(named:"dyla_img_mj_stateRefreshing_04_135x66_")!],duration: 0.5,for:
+         MJRefreshState.refreshing)
+        header?.stateLabel.isHidden = false
+        header?.lastUpdatedTimeLabel.isHidden = false
+        
+        return header!
+    }()
+
+        // MARK: 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         loadData()
+        
     }
-    
 }
+
+
 
 // MARK:- 设置UI界面
 extension BaseAnchorViewController {
@@ -65,13 +82,23 @@ extension BaseAnchorViewController {
         view.addSubview(collectionView)
         
         super.setupUI()
+        
+        
 
     }
+    
+   
 }
 
 // MARK:- 请求数据
 extension BaseAnchorViewController {
     func loadData() {
+
+    }
+    
+    override func loadDataFinished() {
+        super.loadDataFinished()
+        collectionView.mj_header.endRefreshing()
     }
 }
 
@@ -133,5 +160,16 @@ extension BaseAnchorViewController :  UICollectionViewDelegate {
         let normalRoomVC = RoomNormalViewController()
         
         navigationController?.pushViewController(normalRoomVC, animated: true)
+    }
+    
+    private func Player() {
+    /*
+    http://capi.douyucdn.cn/api/v1/room/71415?aid=ios&client_sys=ios&ne=1&support_pwd=1&time=1478089800&auth=9f4dd28b236427303383c979f2bed266
+     auth以前Android分析
+     auth值：
+     md5(room/522387/?aid=android&clientsys=android&time="+1231)
+     不知道auth怎么加密的  无法得到最新auth算法
+     暂时无法做，这里打算用其他平台直播流，仅测试直播流播放
+    */
     }
 }

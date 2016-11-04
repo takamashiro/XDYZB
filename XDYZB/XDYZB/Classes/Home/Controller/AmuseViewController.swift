@@ -29,6 +29,9 @@ extension AmuseViewController {
         // 将菜单的View添加到collectionView中
         collectionView.addSubview(menuView)
         collectionView.contentInset = UIEdgeInsets(top: kMenuViewH, left: 0, bottom: 0, right: 0)
+        
+        header.ignoredScrollViewContentInsetTop = kMenuViewH
+        collectionView.mj_header = header
     }
 }
 

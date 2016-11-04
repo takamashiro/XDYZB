@@ -52,6 +52,5 @@ extension BaseViewController {
         animImageView.isHidden = true
         
         contentView?.isHidden = false
-        
     }
 }

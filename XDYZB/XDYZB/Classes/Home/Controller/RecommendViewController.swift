@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 private let kCycleViewH = kScreenW * 3 / 8
 private let kGameViewH : CGFloat = 90
@@ -26,6 +27,8 @@ class RecommendViewController: BaseAnchorViewController {
         gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
         return gameView
     }()
+    
+   
 }
 
 extension RecommendViewController {
@@ -39,15 +42,21 @@ extension RecommendViewController {
         collectionView.addSubview(cycleView)
         // 3.将gameView添加collectionView中
         collectionView.addSubview(gameView)
-
+        collectionView.mj_header = header
         collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
+        
+        header.ignoredScrollViewContentInsetTop = kCycleViewH + kGameViewH
+        collectionView.mj_header = header
+    
      }
+
 }
 
 
 //MARK:- 请求数据
 extension RecommendViewController {
     override func loadData() {
+  
         // 0.给父类中的ViewModel进行赋值
         baseVM = recommandViewModel
         

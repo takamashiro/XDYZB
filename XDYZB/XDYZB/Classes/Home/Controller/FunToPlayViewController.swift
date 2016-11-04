@@ -23,6 +23,9 @@ extension FunToPlayViewController {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.headerReferenceSize = CGSize.zero
         collectionView.contentInset = UIEdgeInsets(top: kTopMargin, left: 0, bottom: 0, right: 0)
+        
+        header.ignoredScrollViewContentInsetTop = kTopMargin
+        collectionView.mj_header = header
     }
 }
 

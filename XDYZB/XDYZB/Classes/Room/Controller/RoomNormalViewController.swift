@@ -10,6 +10,8 @@ import UIKit
 
 class RoomNormalViewController: UIViewController {
 
+     var room_id : Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

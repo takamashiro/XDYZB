@@ -6,4 +6,5 @@ use_frameworks!
 target 'XDYZB' do
 pod 'Alamofire'
 pod 'Kingfisher'
+pod 'MJRefresh'
 end
