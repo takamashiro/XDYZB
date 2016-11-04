@@ -27,7 +27,7 @@
         <!--我的-->
         <scene sceneID="Vzh-50-Wkr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u4l-Bu-qJt" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u4l-Bu-qJt" customClass="CustomNavigationViewController" customModule="XDYZB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的" image="btn_user_normal" selectedImage="btn_user_selected" id="6pC-LZ-iIi"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

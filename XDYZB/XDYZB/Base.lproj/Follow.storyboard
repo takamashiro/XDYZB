@@ -22,17 +22,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0E3-eb-5wQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="809"/>
+            <point key="canvasLocation" x="150" y="830"/>
         </scene>
         <!--关注-->
         <scene sceneID="Mw3-81-ko8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tu1-Bf-dae" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tu1-Bf-dae" customClass="CustomNavigationViewController" customModule="XDYZB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="关注" image="btn_live_normal" selectedImage="btn_live_selected" id="SvW-2C-3fm"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_7.fullscreen"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z2a-bo-fsc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z2a-bo-fsc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -43,7 +42,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nt5-bn-if2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-297" y="842"/>
+            <point key="canvasLocation" x="-790" y="840"/>
         </scene>
     </scenes>
     <resources>

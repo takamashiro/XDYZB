@@ -11,6 +11,7 @@ import UIKit
 private let kTitleViewH : CGFloat = 40
 class HomeViewController: UIViewController {
 
+    lazy var window : UIWindow = UIWindow()
     
     //MARK:- 懒加载属性
     internal lazy var pageTitleView : PageTitleView = { [weak self] in
@@ -43,8 +44,12 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         //设置UI界面
         setupUI();
-       
+        let x = UIScreen.main.bounds.size.width - 44 - 10
+        let y = UIScreen.main.bounds.size.height - 48 - 44
+        let livingBtn = UIButton(frame: CGRect(x: x, y: y, width: 44, height: 44))
         
+        livingBtn.setImage(UIImage(named:"home_play_btn_44x44_"), for: UIControlState.normal)
+        UIApplication.shared.windows.first!.addSubview(livingBtn)
     }
 
 
@@ -79,9 +84,11 @@ extension HomeViewController {
         let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click",size: size,target:self,action:#selector(self.qrCodeItemClick))
        
         
-        navigationItem.rightBarButtonItems = [historyItem,searchItem,qrcodeItem];
+        navigationItem.rightBarButtonItems = [searchItem,qrcodeItem,historyItem];
         
     }
+    
+   
 }
 
 //MARK: - PageTitleViewDelegate
@@ -108,9 +115,6 @@ extension HomeViewController {
         print("historyItemClick")
     }
     
-    func searchItemClick() {
-        print("searchItemClick")
-    }
     
     func qrCodeItemClick() {
         //1.创建二维码控制器
@@ -119,4 +123,60 @@ extension HomeViewController {
         //2.弹出二维码控制器
         present(vc, animated: true, completion: nil)
     }
+}
+
+extension HomeViewController:PYSearchViewControllerDelegate {
+    func searchItemClick() {
+        // 1.创建热门搜索
+        //let hotSeaches = ["Java", "Python", "Objective-C", "Swift", "C", "C++", "PHP", "C#", "Perl", "Go", "JavaScript", "R", "Ruby", "MATLAB"]
+        // 2. 创建控制器
+
+
+        let searchViewController = PYSearchViewController.init(hotSearches: nil, searchBarPlaceholder: "搜索房间ID、主播名称") { (searchViewController, searchBar, searchText) in
+            searchViewController?.navigationController?.pushViewController(SearchResultViewController(), animated: true)
+        }
+        searchViewController?.hotSearchStyle = PYHotSearchStyle.arcBorderTag
+        searchViewController?.searchHistoryStyle = PYSearchHistoryStyle.normalTag
+        searchViewController?.delegate = self
+     
+        let nav = UINavigationController.init(rootViewController: searchViewController!)
+        
+        nav.navigationBar.tintColor = UIColor.orange
+
+        present(nav, animated: false, completion: nil)
+        
+    }
+    
+    /** 点击(开始)搜索时调用 */
+    func searchViewController(_ searchViewController: PYSearchViewController!, didSearchWithsearchBar searchBar: UISearchBar!, searchText: String!) {
+         searchViewController?.navigationController?.pushViewController(SearchResultViewController(), animated: true)
+    }
+    /** 搜索框文本变化时，显示的搜索建议通过searchViewController的searchSuggestions赋值即可 */
+    func searchViewController(_ searchViewController: PYSearchViewController!, searchTextDidChange seachBar: UISearchBar!, searchText: String!) {
+        if  searchText.characters.count > 0{ // 与搜索条件再搜索
+             // 根据条件发送查询（这里模拟搜索）
+           delay(0.25, closure: { 
+            // 搜素完毕
+            // 显示建议搜索结果
+            var searchSuggestionsM  = [String]()
+            
+            for i in 0...5 {
+               let searchSuggestion = String(format: "搜索建议 %d", i)
+                searchSuggestionsM.append(searchSuggestion)
+            }
+            // 返回
+            searchViewController.searchSuggestions = searchSuggestionsM;
+           })
+        }
+    }
+    
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
+    /** 点击取消时调用 */
+    func didClickCancel(_ searchViewController: PYSearchViewController!) {
+        
+    }
+
 }

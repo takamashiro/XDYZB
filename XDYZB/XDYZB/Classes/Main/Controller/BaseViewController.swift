@@ -31,6 +31,10 @@ class BaseViewController: UIViewController {
         setupUI()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.default
+    }
+    
 }
 
 extension BaseViewController {

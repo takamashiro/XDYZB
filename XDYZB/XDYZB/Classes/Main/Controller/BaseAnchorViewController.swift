@@ -82,10 +82,13 @@ extension BaseAnchorViewController {
         view.addSubview(collectionView)
         
         super.setupUI()
-        
-        
-
+    
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.default
+    }
+    
+   
     
    
 }

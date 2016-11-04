@@ -13,6 +13,8 @@ class CustomNavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupAppearance()
+        
         //1.获取系统的Pop手势
         guard let systemGesture = interactivePopGestureRecognizer else {return}
         
@@ -24,7 +26,7 @@ class CustomNavigationViewController: UINavigationController {
         /*
         var count : UInt32 = 0
         let ivars = class_copyIvarList(UIGestureRecognizer.self, &count)!
-        
+      
         for i in 0..<count {
             let ivar = ivars[Int(i)]
             let name = ivar_getName(ivar)
@@ -45,7 +47,11 @@ class CustomNavigationViewController: UINavigationController {
         panGesture.addTarget(target , action: action)
     }
     
-    
+    func setupAppearance() {
+        navigationBar.barTintColor = UIColor.orange
+        navigationBar.tintColor = UIColor.orange
+        
+    }
 
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         //隐藏要push的控制器的tabbar
@@ -53,5 +59,9 @@ class CustomNavigationViewController: UINavigationController {
         
         
         super.pushViewController(viewController, animated: animated)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
 }
