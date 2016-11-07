@@ -14,6 +14,14 @@
 		552514221DAD45F40063886B /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552514211DAD45F40063886B /* Live.storyboard */; };
 		552514241DAD460E0063886B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552514231DAD460E0063886B /* BaseViewModel.swift */; };
 		552514261DAD48B30063886B /* BaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552514251DAD48B30063886B /* BaseAnchorViewController.swift */; };
+		553661881DD10C650046B131 /* PYSearch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5536617C1DD10C650046B131 /* PYSearch.bundle */; };
+		553661891DD10C650046B131 /* PYSearchConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 5536617F1DD10C650046B131 /* PYSearchConst.m */; };
+		5536618A1DD10C650046B131 /* PYSearchSuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553661811DD10C650046B131 /* PYSearchSuggestionViewController.m */; };
+		5536618B1DD10C650046B131 /* PYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 553661831DD10C650046B131 /* PYSearchViewController.m */; };
+		5536618C1DD10C650046B131 /* UIColor+PYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 553661851DD10C650046B131 /* UIColor+PYExtension.m */; };
+		5536618D1DD10C650046B131 /* UIView+PYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 553661871DD10C650046B131 /* UIView+PYExtension.m */; };
+		553661911DD10C820046B131 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5536618F1DD10C820046B131 /* SearchResultViewController.swift */; };
+		553661921DD10C820046B131 /* XSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553661901DD10C820046B131 /* XSearchViewController.swift */; };
 		553A2D5E1D9F358000AA59BB /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553A2D5C1D9F358000AA59BB /* CollectionGameCell.swift */; };
 		553A2D5F1D9F358000AA59BB /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553A2D5D1D9F358000AA59BB /* CollectionGameCell.xib */; };
 		5543135F1DADFC2B004E7F94 /* AmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5543135E1DADFC2B004E7F94 /* AmuseMenuView.swift */; };
@@ -76,6 +84,20 @@
 		552514211DAD45F40063886B /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
 		552514231DAD460E0063886B /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		552514251DAD48B30063886B /* BaseAnchorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewController.swift; sourceTree = "<group>"; };
+		5536617C1DD10C650046B131 /* PYSearch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PYSearch.bundle; sourceTree = "<group>"; };
+		5536617D1DD10C650046B131 /* PYSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearch.h; sourceTree = "<group>"; };
+		5536617E1DD10C650046B131 /* PYSearchConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearchConst.h; sourceTree = "<group>"; };
+		5536617F1DD10C650046B131 /* PYSearchConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSearchConst.m; sourceTree = "<group>"; };
+		553661801DD10C650046B131 /* PYSearchSuggestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearchSuggestionViewController.h; sourceTree = "<group>"; };
+		553661811DD10C650046B131 /* PYSearchSuggestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSearchSuggestionViewController.m; sourceTree = "<group>"; };
+		553661821DD10C650046B131 /* PYSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearchViewController.h; sourceTree = "<group>"; };
+		553661831DD10C650046B131 /* PYSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSearchViewController.m; sourceTree = "<group>"; };
+		553661841DD10C650046B131 /* UIColor+PYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PYExtension.h"; sourceTree = "<group>"; };
+		553661851DD10C650046B131 /* UIColor+PYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PYExtension.m"; sourceTree = "<group>"; };
+		553661861DD10C650046B131 /* UIView+PYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PYExtension.h"; sourceTree = "<group>"; };
+		553661871DD10C650046B131 /* UIView+PYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PYExtension.m"; sourceTree = "<group>"; };
+		5536618F1DD10C820046B131 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		553661901DD10C820046B131 /* XSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XSearchViewController.swift; sourceTree = "<group>"; };
 		553A2D5C1D9F358000AA59BB /* CollectionGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
 		553A2D5D1D9F358000AA59BB /* CollectionGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionGameCell.xib; sourceTree = "<group>"; };
 		5543135E1DADFC2B004E7F94 /* AmuseMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseMenuView.swift; sourceTree = "<group>"; };
@@ -234,6 +256,34 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		5536617B1DD10C650046B131 /* PYSearch */ = {
+			isa = PBXGroup;
+			children = (
+				5536617C1DD10C650046B131 /* PYSearch.bundle */,
+				5536617D1DD10C650046B131 /* PYSearch.h */,
+				5536617E1DD10C650046B131 /* PYSearchConst.h */,
+				5536617F1DD10C650046B131 /* PYSearchConst.m */,
+				553661801DD10C650046B131 /* PYSearchSuggestionViewController.h */,
+				553661811DD10C650046B131 /* PYSearchSuggestionViewController.m */,
+				553661821DD10C650046B131 /* PYSearchViewController.h */,
+				553661831DD10C650046B131 /* PYSearchViewController.m */,
+				553661841DD10C650046B131 /* UIColor+PYExtension.h */,
+				553661851DD10C650046B131 /* UIColor+PYExtension.m */,
+				553661861DD10C650046B131 /* UIView+PYExtension.h */,
+				553661871DD10C650046B131 /* UIView+PYExtension.m */,
+			);
+			path = PYSearch;
+			sourceTree = "<group>";
+		};
+		5536618E1DD10C820046B131 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5536618F1DD10C820046B131 /* SearchResultViewController.swift */,
+				553661901DD10C820046B131 /* XSearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		554D46F21D989711006FB076 = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +361,7 @@
 		55AB551D1D983D2600CE2002 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5536618E1DD10C820046B131 /* Search */,
 				55EAD0AA1DC8BA4100C144CD /* QRCode */,
 				5588F2D61D9B82F400016792 /* ViewModel */,
 				552316681D98BCA400BCCAA9 /* Model */,
@@ -350,6 +401,7 @@
 		55AB55211D983D2600CE2002 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5536617B1DD10C650046B131 /* PYSearch */,
 				5588F2BD1D98EB2700016792 /* Extension */,
 				5588F2C21D990D5C00016792 /* Common.swift */,
 				557CA4371D9ADA6000851448 /* NetworkTools.swift */,
@@ -497,6 +549,7 @@
 				559500CD1D9E112C00CE67DB /* CollectionCycleCell.xib in Resources */,
 				5588F2D51D9A744300016792 /* CollectionPrettyCell.xib in Resources */,
 				554D47041D989711006FB076 /* Main.storyboard in Resources */,
+				553661881DD10C650046B131 /* PYSearch.bundle in Resources */,
 				559500D11D9E5CF800CE67DB /* RecommendGameView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,6 +616,7 @@
 				55B13B361D9D6D8600ED6300 /* RecommendCycleView.swift in Sources */,
 				55D387CB1DB20034007DB488 /* BaseViewController.swift in Sources */,
 				5588F2C71D99338D00016792 /* UIColor-Extension.swift in Sources */,
+				5536618A1DD10C650046B131 /* PYSearchSuggestionViewController.m in Sources */,
 				5588F2C91D9A1DDA00016792 /* RecommendViewController.swift in Sources */,
 				552514261DAD48B30063886B /* BaseAnchorViewController.swift in Sources */,
 				559500C51D9CCE4400CE67DB /* AnchorGroup.swift in Sources */,
@@ -572,8 +626,11 @@
 				554313641DADFE8F004E7F94 /* AmuseMenuViewCell.swift in Sources */,
 				5543136C1DAE2179004E7F94 /* FunToPlayViewModel.swift in Sources */,
 				559500CC1D9E112C00CE67DB /* CollectionCycleCell.swift in Sources */,
+				5536618B1DD10C650046B131 /* PYSearchViewController.m in Sources */,
 				55B13B3A1D9D7CAF00ED6300 /* CycleModel.swift in Sources */,
 				552514241DAD460E0063886B /* BaseViewModel.swift in Sources */,
+				553661891DD10C650046B131 /* PYSearchConst.m in Sources */,
+				5536618D1DD10C650046B131 /* UIView+PYExtension.m in Sources */,
 				5588F2C51D9930E400016792 /* PageContentView.swift in Sources */,
 				5564F1111DABE9AE00D36A00 /* GameModel.swift in Sources */,
 				5588F2BF1D98EB8000016792 /* UIBarButtonItem-Extension.swift in Sources */,
@@ -587,10 +644,13 @@
 				559500CF1D9E5CDB00CE67DB /* RecommendGameView.swift in Sources */,
 				5588F2D41D9A744300016792 /* CollectionPrettyCell.swift in Sources */,
 				5588F2DA1D9B873100016792 /* NSDate-Extension.swift in Sources */,
+				553661921DD10C820046B131 /* XSearchViewController.swift in Sources */,
 				559500C91D9D001F00CE67DB /* CollectionBaseCell.swift in Sources */,
 				55EAD0B01DC8BA4100C144CD /* QRCodeViewController.swift in Sources */,
+				5536618C1DD10C650046B131 /* UIColor+PYExtension.m in Sources */,
 				5543135F1DADFC2B004E7F94 /* AmuseMenuView.swift in Sources */,
 				5588F2D01D9A6AD700016792 /* CollectionNormalCell.swift in Sources */,
+				553661911DD10C820046B131 /* SearchResultViewController.swift in Sources */,
 				553A2D5E1D9F358000AA59BB /* CollectionGameCell.swift in Sources */,
 				557CA4381D9ADA6000851448 /* NetworkTools.swift in Sources */,
 				55D387D11DB2208A007DB488 /* RoomShowViewController.swift in Sources */,

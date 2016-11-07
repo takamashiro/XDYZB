@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
         //设置UI界面
         setupUI();
         let x = UIScreen.main.bounds.size.width - 44 - 10
-        let y = UIScreen.main.bounds.size.height - 48 - 44
+        let y = UIScreen.main.bounds.size.height - 64 - 44
         let livingBtn = UIButton(frame: CGRect(x: x, y: y, width: 44, height: 44))
         
         livingBtn.setImage(UIImage(named:"home_play_btn_44x44_"), for: UIControlState.normal)
