@@ -21,6 +21,7 @@ extension BaseViewModel {
             guard let resultDict = result as? [String : Any] else { return }
             guard let dataArray = resultDict["data"] as? [[String : Any]] else { return }
             
+            self.anchorGroups.removeAll()//先清空
             // 2.遍历数组中的字典
             if isGroupData {
                 for dict in dataArray {

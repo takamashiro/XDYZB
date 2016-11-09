@@ -130,13 +130,14 @@ extension BaseAnchorViewController : UICollectionViewDataSource {
         // 1.取出HeaderView
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
         
+        let group = baseVM.anchorGroups[indexPath.section]
+     
         // 2.给HeaderView设置数据
         if indexPath.section == 0 {
-            let group = baseVM.anchorGroups[indexPath.section]
             group.icon_name = "home_header_hot"
             headerView.group = group
         } else {
-            headerView.group = baseVM.anchorGroups[indexPath.section]
+            headerView.group = group
         }
         return headerView
     }
@@ -150,18 +151,18 @@ extension BaseAnchorViewController :  UICollectionViewDelegate {
         let anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
         
         //判断是秀场房间还是普通房间
-        anchor.isVertical == 0 ? pushNormalRoomVC() : presentShowRoomVC()
+        anchor.isVertical == 0 ? pushNormalRoomVC(vertical_src: anchor.vertical_src) : presentShowRoomVC(vertical_src: anchor.vertical_src)
     }
     
-    private func presentShowRoomVC() {
+    private func presentShowRoomVC(vertical_src:String) {
         let showRoomVC = RoomShowViewController()
-        
+        showRoomVC.backgroundImage = vertical_src
         present(showRoomVC, animated: true, completion: nil)
     }
     
-    private func pushNormalRoomVC() {
+    private func pushNormalRoomVC(vertical_src:String) {
         let normalRoomVC = RoomNormalViewController()
-        
+        normalRoomVC.backgroundImage = vertical_src
         navigationController?.pushViewController(normalRoomVC, animated: true)
     }
     

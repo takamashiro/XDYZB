@@ -33,6 +33,9 @@ extension RecommandViewModel {
         // 2.创建Group
         let dGroup = DispatchGroup()
         
+        self.bigDataGroup.anchors.removeAll()
+        self.prettyGroup.anchors.removeAll()
+        
         // 3.请求第一部分推荐数据
         dGroup.enter()
         NetworkTools.requestData(.GET, URLString: kGetbigDataRoom, parameters: ["time" : Date.getCurrentTime() as NSString]) { (result) in
@@ -105,6 +108,7 @@ extension RecommandViewModel {
             // 1.获取整体字典数据
             guard let resultDict = result as? [String : NSObject] else { return }
             
+            self.cycleModels.removeAll()
             // 2.根据data的key获取数据
             guard let dataArray = resultDict["data"] as? [[String : NSObject]] else { return }
             
