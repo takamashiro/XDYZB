@@ -14,7 +14,7 @@ let kTabbarH : CGFloat = 44
 
 let kScreenW = UIScreen.main.bounds.width
 let kScreenH = UIScreen.main.bounds.height
-
+let kBaseColor = UIColor(r: 0, g: 255, b: 110)//UIColor(r: 255, g: 112, b: 0)
 
 //请求API
 let kGetbigDataRoom = "http://capi.douyucdn.cn/api/v1/getbigDataRoom"

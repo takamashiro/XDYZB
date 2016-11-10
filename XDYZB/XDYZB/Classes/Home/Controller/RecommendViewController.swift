@@ -37,7 +37,7 @@ extension RecommendViewController {
         
         // 1.先调用super.setupUI()
         super.setupUI()
-        
+
         //2.将cycleView添加到CollectionView中
         collectionView.addSubview(cycleView)
         // 3.将gameView添加collectionView中

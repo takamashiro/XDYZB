@@ -48,8 +48,11 @@ class CustomNavigationViewController: UINavigationController {
     }
     
     func setupAppearance() {
-        navigationBar.barTintColor = UIColor.orange
-        navigationBar.tintColor = UIColor.orange
+        navigationBar.barTintColor = kBaseColor
+        navigationBar.tintColor = kBaseColor
+        
+        let navigationTitleAttribute: NSDictionary = NSDictionary(object: UIColor.white, forKey: NSForegroundColorAttributeName as NSCopying)
+        navigationBar.titleTextAttributes = navigationTitleAttribute as? [String : Any]
         
     }
 

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tu1-Bf-dae">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tu1-Bf-dae">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Follow View Controller-->
         <scene sceneID="E5n-l4-UkW">
             <objects>
-                <viewController id="Xmk-tE-34J" sceneMemberID="viewController">
+                <viewController id="Xmk-tE-34J" customClass="FollowViewController" customModule="XDYZB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iVK-Kh-Fv7"/>
                         <viewControllerLayoutGuide type="bottom" id="0b9-kt-yhw"/>
@@ -28,10 +31,10 @@
         <scene sceneID="Mw3-81-ko8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tu1-Bf-dae" customClass="CustomNavigationViewController" customModule="XDYZB" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="关注" image="btn_live_normal" selectedImage="btn_live_selected" id="SvW-2C-3fm"/>
+                    <tabBarItem key="tabBarItem" title="关注" image="tabFocus_24x24_" selectedImage="tabFocusHL_24x24_" id="SvW-2C-3fm"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z2a-bo-fsc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z2a-bo-fsc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -46,7 +49,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_live_normal" width="30" height="24"/>
-        <image name="btn_live_selected" width="30" height="24"/>
+        <image name="tabFocusHL_24x24_" width="24" height="24"/>
+        <image name="tabFocus_24x24_" width="24" height="24"/>
     </resources>
 </document>

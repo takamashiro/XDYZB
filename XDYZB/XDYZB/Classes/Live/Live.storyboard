@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1Im-hY-OMJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1Im-hY-OMJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Live View Controller-->
         <scene sceneID="K0L-nG-1bb">
             <objects>
-                <viewController id="u5t-Oq-t2S" sceneMemberID="viewController">
+                <viewController id="u5t-Oq-t2S" customClass="LiveViewController" customModule="XDYZB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4j3-Rk-EHV"/>
                         <viewControllerLayoutGuide type="bottom" id="mtt-Ff-wCS"/>
@@ -28,7 +31,7 @@
         <scene sceneID="9QU-G4-DcY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Im-hY-OMJ" customClass="CustomNavigationViewController" customModule="XDYZB" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="直播" image="btn_column_normal" selectedImage="btn_column_selected" id="u4X-gz-xKX"/>
+                    <tabBarItem key="tabBarItem" title="直播" image="tabLiving_24x24_" selectedImage="tabLivingHL_24x24_" id="u4X-gz-xKX"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7zx-SS-N1o">
@@ -46,7 +49,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_column_normal" width="24" height="24"/>
-        <image name="btn_column_selected" width="24" height="24"/>
+        <image name="tabLivingHL_24x24_" width="24" height="24"/>
+        <image name="tabLiving_24x24_" width="24" height="24"/>
     </resources>
 </document>
