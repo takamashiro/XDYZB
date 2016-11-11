@@ -28,9 +28,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>二维码扫描使用你的摄像头</string>
+	<string>takamashiro使用你的摄像头</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>takamashiro需要访问麦克风</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>二维码扫描可能也要使用你的相册</string>
+	<string>takamashiro也要使用你的相册</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

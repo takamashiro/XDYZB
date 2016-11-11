@@ -7,4 +7,5 @@ target 'XDYZB' do
 pod 'Alamofire'
 pod 'Kingfisher'
 pod 'MJRefresh'
+pod 'LFLiveKit'
 end

@@ -49,9 +49,13 @@ class HomeViewController: UIViewController {
         let livingBtn = UIButton(frame: CGRect(x: x, y: y, width: 44, height: 44))
         
         livingBtn.setImage(UIImage(named:"home_play_btn_44x44_"), for: UIControlState.normal)
+        livingBtn.addTarget(self, action: #selector(presentLiveVC), for: UIControlEvents.touchUpInside)
         UIApplication.shared.windows.first!.addSubview(livingBtn)
     }
 
+    func presentLiveVC() {
+        present(LiveMySelfViewController(), animated: true, completion: nil)
+    }
 
 }
 
