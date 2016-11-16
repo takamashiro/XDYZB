@@ -47,9 +47,21 @@ extension RecommendViewController {
         
         header.ignoredScrollViewContentInsetTop = kCycleViewH + kGameViewH
         collectionView.mj_header = header
+        
+        let x = UIScreen.main.bounds.size.width - 44
+        let y = collectionView.bounds.size.height - 44 - kCycleViewH - kGameViewH
+        let livingBtn = UIButton(frame: CGRect(x: x, y: y, width: 44, height: 44))
+        
+        
+        livingBtn.setImage(UIImage(named:"home_play_btn_44x44_"), for: UIControlState.normal)
+        livingBtn.addTarget(self, action: #selector(presentLiveVC), for: UIControlEvents.touchUpInside)
+        view.insertSubview(livingBtn, aboveSubview: gameView)
     
      }
 
+    func presentLiveVC() {
+        present(LiveMySelfViewController(), animated: true, completion: nil)
+    }
 }
 
 

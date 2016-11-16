@@ -44,19 +44,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         //设置UI界面
         setupUI();
-        let x = UIScreen.main.bounds.size.width - 44 - 10
-        let y = UIScreen.main.bounds.size.height - 64 - 44
-        let livingBtn = UIButton(frame: CGRect(x: x, y: y, width: 44, height: 44))
-        
-        livingBtn.setImage(UIImage(named:"home_play_btn_44x44_"), for: UIControlState.normal)
-        livingBtn.addTarget(self, action: #selector(presentLiveVC), for: UIControlEvents.touchUpInside)
-        UIApplication.shared.windows.first!.addSubview(livingBtn)
     }
-
-    func presentLiveVC() {
-        present(LiveMySelfViewController(), animated: true, completion: nil)
-    }
-
 }
 
 //MARK: -设置UI界面
@@ -132,11 +120,11 @@ extension HomeViewController {
 extension HomeViewController:PYSearchViewControllerDelegate {
     func searchItemClick() {
         // 1.创建热门搜索
-        //let hotSeaches = ["Java", "Python", "Objective-C", "Swift", "C", "C++", "PHP", "C#", "Perl", "Go", "JavaScript", "R", "Ruby", "MATLAB"]
+        let hotSeaches = ["SM超级明星", "金希澈", "伯贤", "小灰灰", "飞飞", "饥荒", "阴阳师", "林喵喵", "七哥","陈一发儿"]
         // 2. 创建控制器
 
 
-        let searchViewController = PYSearchViewController.init(hotSearches: nil, searchBarPlaceholder: "搜索房间ID、主播名称") { (searchViewController, searchBar, searchText) in
+        let searchViewController = PYSearchViewController.init(hotSearches: hotSeaches, searchBarPlaceholder: "搜索房间ID、主播名称") { (searchViewController, searchBar, searchText) in
             searchViewController?.navigationController?.pushViewController(SearchResultViewController(), animated: true)
         }
         searchViewController?.hotSearchStyle = PYHotSearchStyle.arcBorderTag
