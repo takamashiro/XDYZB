@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 private let kTopMargin : CGFloat = 8
 
@@ -25,7 +26,16 @@ extension FunToPlayViewController {
         collectionView.contentInset = UIEdgeInsets(top: kTopMargin, left: 0, bottom: 0, right: 0)
         
         header.ignoredScrollViewContentInsetTop = kTopMargin
-        collectionView.mj_header = header
+        collectionView.mj_header = MJRefreshGifHeader(refreshingBlock: {
+            self.funToPlayVM.isloadMore = false
+            self.funToPlayVM.currentPage = 0
+            self.loadData()
+        })
+        collectionView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: {
+            self.funToPlayVM.isloadMore = true
+            self.funToPlayVM.currentPage += 1
+            self.loadData()
+        })
     }
 }
 

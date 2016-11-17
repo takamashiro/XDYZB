@@ -10,19 +10,15 @@ import UIKit
 
 
  class FunToPlayViewModel : BaseViewModel {
-    
+    // 用于上下拉刷新
+    var currentPage = 0
     lazy var FunToPlays : [AnchorModel] = [AnchorModel]()
-    var parameters :[String : NSString]? {
-        didSet {
-            parameters = self.getParameters(isMore: false)  //逻辑有待修改
-        }
-    }
 }
 
 extension FunToPlayViewModel {
     func loadFunToPlayData(finishedCallback : @escaping () -> ()) {
       
-        let parameters = ["limit" : 30,"offset" : 0]
+        let parameters = ["limit" : 20 ,"offset" : 20 * currentPage]
         loadAnchorData(isGroupData: false, URLString: kGetFunToPlayData, parameters: parameters) {
             finishedCallback()
         }
